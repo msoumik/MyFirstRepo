@@ -61,6 +61,24 @@
               <value name="sourceStepId">S28</value>
             </idatacodable>
           </array>
+          <array name="loggedInputs" type="idatacodable" depth="1">
+            <idatacodable javaclass="com.wm.app.prt.model.PRTLoggedFieldDef">
+              <value name="docName">EmployeeData</value>
+              <value name="fieldName">FName</value>
+              <value name="fieldAlias">FName</value>
+              <value name="fieldType">0</value>
+              <value name="isTN">false</value>
+              <value name="isGlobalData">false</value>
+            </idatacodable>
+            <idatacodable javaclass="com.wm.app.prt.model.PRTLoggedFieldDef">
+              <value name="docName">EmployeeData</value>
+              <value name="fieldName"></value>
+              <value name="fieldAlias">EmployeeData</value>
+              <value name="fieldType">3</value>
+              <value name="isTN">false</value>
+              <value name="isGlobalData">false</value>
+            </idatacodable>
+          </array>
           <value name="servicePackage">BPMProject</value>
           <value name="serviceName">BPMProject.testProcess.testProcess_1.Default:Task1</value>
           <array name="outputs" type="idatacodable" depth="1">
@@ -68,7 +86,9 @@
               <value name="isXpathCond">false</value>
               <value name="targetServerId">Default</value>
               <value name="targetStepId">S31</value>
-              <null name="pipeKeys"/>
+              <array name="pipeKeys" type="value" depth="1">
+                <value>EmployeeData</value>
+              </array>
               <null name="deadPathTargets"/>
               <value name="compensating">false</value>
             </idatacodable>
@@ -86,6 +106,25 @@
           <value name="skip">false</value>
           <value name="parallelExecute">false</value>
           <value name="suppressUnsatisfiedJoin">false</value>
+          <array name="loggedInputFields" type="idatacodable" depth="1">
+            <idatacodable javaclass="com.wm.app.prt.model.LoggedDocument">
+              <value name="name">EmployeeData</value>
+              <value name="alias">EmployeeData</value>
+              <value name="collection">false</value>
+              <value name="docType">docPublish.docs:EmployeeData</value>
+              <null name="eventTypeIdPrefix"/>
+              <value name="eventTypeIdNamespace">http://namespaces.softwareag.com/EDA/docPublish/docs</value>
+              <value name="eventTypeIdLocal">EmployeeData</value>
+              <array name="fields" type="idatacodable" depth="1">
+                <idatacodable javaclass="com.wm.app.prt.model.LoggedField">
+                  <value name="name">FName</value>
+                  <value name="alias">FName</value>
+                  <value name="collection">false</value>
+                  <number name="type" type="java.lang.Integer">0</number>
+                </idatacodable>
+              </array>
+            </idatacodable>
+          </array>
           <value name="forCompensation">false</value>
         </idatacodable>
         <idatacodable javaclass="com.wm.app.prt.model.StartMessageEvent">
@@ -123,6 +162,6 @@
         </idatacodable>
       </array>
     </idatacodable>
-    <Date name="timestamp" type="java.util.Date">Thu Nov 28 20:56:40 ICT 2019</Date>
+    <Date name="timestamp" type="java.util.Date">Mon Dec 02 17:57:42 ICT 2019</Date>
   </record>
 </IDataXMLCoder>
