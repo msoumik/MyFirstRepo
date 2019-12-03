@@ -10,4 +10,11 @@
   <null name="requires"/>
   <null name="listACL"/>
   <value name="webappLoad">yes</value>
+  <value name="name">BPMSupport</value>
+  <value name="build"></value>
+  <value name="description"></value>
+  <value name="time">2019-11-28 21:23:32 ICT</value>
+  <value name="jvm_version">1.8.0_181</value>
+  <value name="publisher">SAG-G25VMC2.eur.ad.sag</value>
+  <value name="patch_nums"></value>
 </Values>
