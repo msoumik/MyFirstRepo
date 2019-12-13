@@ -19,7 +19,7 @@
 */
 
 pipeline {
-    agent any y
+    agent any
 
     stages {
         stage('Build'){
