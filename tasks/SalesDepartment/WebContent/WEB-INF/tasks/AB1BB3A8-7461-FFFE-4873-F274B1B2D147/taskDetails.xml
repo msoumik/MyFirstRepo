@@ -1,0 +1,23 @@
+<CONFIG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://www.webmethods.com/schema/xmlImport.xsd"
+>
+	<CONTEXT alias="AB1BB3A8-7461-FFFE-4873-F274B1B2D147.task.app">
+		<folder name="ApproveRejectReview Details" description="ApproveRejectReview Details" alias="AB1BB3A8-7461-FFFE-4873-F274B1B2D147.task.app.details.page" isTaskFolder="false">
+            <page>
+            	<row>
+            		<column>
+            			<salesdepartment___approverejectreviewoverview name="Task View" alias="AB1BB3A8-7461-FFFE-4873-F274B1B2D147.task.app.details.portlet">
+                            <layout name="titlebar" value="false"/>
+                            <layout name="border" value="false"/>            			
+            			</salesdepartment___approverejectreviewoverview>             			
+                    </column>
+                </row>
+                <hobos/>
+            </page>
+        </folder>
+        <salesdepartment___approverejectreviewview name="New Task View" alias="AB1BB3A8-7461-FFFE-4873-F274B1B2D147.task.app.details.view.portlet">
+                            <layout name="titlebar" value="false"/>
+                            <layout name="border" value="false"/>            			
+        </salesdepartment___approverejectreviewview> 
+    </CONTEXT>
+</CONFIG>
