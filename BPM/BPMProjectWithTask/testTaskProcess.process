@@ -24,6 +24,12 @@
   <logicalDataItem Id="bb3d5bae-cd7c-445a-8051-80679008f1b4"
     description="" dimension="0" label="Approve or RejectOutputEnv"
     name="{ProcessNamespace}Approve or RejectOutputEnv" type="{pub.task}TaskCompletionInfo"/>
+  <logicalDataItem Id="06899edc-41f0-44db-b22f-04becb9356b8"
+    description="" dimension="0" label="NewApprovalTaskInputEnv"
+    name="{ProcessNamespace}NewApprovalTaskInputEnv" type="{pub.task}TaskQueueInfo"/>
+  <logicalDataItem Id="e849c5e7-e261-4a64-b937-004c8695972a"
+    description="" dimension="0" label="NewApprovalTaskOutputEnv"
+    name="{ProcessNamespace}NewApprovalTaskOutputEnv" type="{pub.task}TaskCompletionInfo"/>
   <timeout calendarAlias="" calendarTime="0:0:0"
     dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
     dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
@@ -167,6 +173,36 @@
         timeoutStyle="RELATIVE" timeoutType="stepTimeout"
         timeoutValue="0" xpathTimeoutValue=""/>
     </invokeStep>
+    <invokeStep Id="5bd131ce-561a-4b9e-9b45-adff849a8b5c"
+      dynamicReferenceProcess="false" externalizeConditions="false"
+      height="60" invokeContainer="P/SalesDepartment"
+      invokeId="8CC7382A-469E-DE40-5AF1-4B32716C07CC" invokeLocation=""
+      invokeName="New Approval Task" invokeType="TASK"
+      isCompensating="false" isTestAfter="false" label="NewApprovalTask"
+      labelHeight="-1" labelWidth="-1" logicalServer="Default"
+      loopMaximum="0" loopMaximumField="" retryCount="0"
+      routingRuleSet="" ruleType="TASK" stepLock="false" uid="S31"
+      useCorrelation="false" width="93" x="602" y="223">
+      <documentation/>
+      <businessKPIs/>
+      <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+        <fontColor blue="0" green="0" red="0"/>
+      </fontData>
+      <input name="{ProcessNamespace}NewApprovalTaskInputEnv"/>
+      <wmExpression/>
+      <output name="{ProcessNamespace}NewApprovalTaskOutputEnv"/>
+      <extendedProperty name="retries" value="0"/>
+      <extendedProperty name="retryInterval" value="60000"/>
+      <timeout calendarAlias="" calendarTime="0:0:0"
+        dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
+        dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
+        dynamicFieldName="" isCalendarTimeout="false"
+        isStaticTimeout="true" isXPathTimeout="false"
+        pipelineCalendarAlias="" pipelineCalendarDays=""
+        pipelineCalendarHours="" pipelineCalendarMinutes=""
+        timeoutStyle="RELATIVE" timeoutType="stepTimeout"
+        timeoutValue="0" xpathTimeoutValue=""/>
+    </invokeStep>
     <transition Id="514c704a-dd13-4ec6-8dad-e432ff3bbb4d" blue="255"
       conditionDescription="" conditionText="" conditionType="IF"
       green="0" lineShape="STRAIGHT" red="0" source="S17"
@@ -176,21 +212,6 @@
       <bendpoint index="1" location="984,238" weight="0.5"/>
       <labelLayout blue="0" defaultLocation="false" green="196"
         height="16" red="255" width="284" x="944" y="177">
-        <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
-          <fontColor blue="0" green="0" red="0"/>
-        </fontData>
-      </labelLayout>
-      <wmExpression/>
-    </transition>
-    <transition Id="6c945c92-9b5b-4916-8c9f-049a3d6cada4" blue="255"
-      conditionDescription="" conditionText="" conditionType="IF"
-      green="0" lineShape="STRAIGHT" red="0" source="S18"
-      sourceLocation="603,134" sourceTerminal="RIGHT" target="S20"
-      targetLocation="650,134" targetTerminal="LEFT" uid="T25">
-      <bendpoint index="0" location="1136,238" weight="0.5"/>
-      <bendpoint index="1" location="1136,238" weight="0.5"/>
-      <labelLayout blue="0" defaultLocation="true" green="196"
-        height="-1" red="255" width="-1" x="-1" y="-1">
         <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
           <fontColor blue="0" green="0" red="0"/>
         </fontData>
@@ -227,6 +248,35 @@
       </labelLayout>
       <wmExpression/>
     </transition>
+    <transition Id="514fd1eb-1357-4703-8f84-256327cef0da" blue="255"
+      conditionDescription="" conditionText="" conditionType="IF"
+      green="0" lineShape="STRAIGHT" red="0" source="S18"
+      sourceLocation="556,164" sourceTerminal="BOTTOM" target="S31"
+      targetLocation="602,253" targetTerminal="LEFT" uid="T32">
+      <bendpoint index="0" location="1066,357" weight="0.5"/>
+      <labelLayout blue="0" defaultLocation="true" green="196"
+        height="-1" red="255" width="-1" x="-1" y="-1">
+        <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+          <fontColor blue="0" green="0" red="0"/>
+        </fontData>
+      </labelLayout>
+      <wmExpression/>
+    </transition>
+    <transition Id="2961764d-ba2d-4fa4-ae50-f1da5b6df625" blue="255"
+      conditionDescription="" conditionText="" conditionType="IF"
+      green="0" lineShape="STRAIGHT" red="0" source="S31"
+      sourceLocation="648,223" sourceTerminal="TOP" target="S20"
+      targetLocation="664,148" targetTerminal="BOTTOM" uid="T33">
+      <bendpoint index="0" location="1158,288" weight="0.5"/>
+      <bendpoint index="1" location="1174,288" weight="0.5"/>
+      <labelLayout blue="0" defaultLocation="true" green="196"
+        height="-1" red="255" width="-1" x="-1" y="-1">
+        <fontData boldFont="false" fontFamily="Arial" fontSize="8" italicFont="false">
+          <fontColor blue="0" green="0" red="0"/>
+        </fontData>
+      </labelLayout>
+      <wmExpression/>
+    </transition>
     <timeout calendarAlias="" calendarTime="0:0:0"
       dynamicCalendarStaticAlias="" dynamicCalendarStaticDays=""
       dynamicCalendarStaticHours="" dynamicCalendarStaticMinutes=""
@@ -237,9 +287,9 @@
       timeoutStyle="RELATIVE" timeoutType="stepTimeout" timeoutValue="0" xpathTimeoutValue=""/>
     <wmExpression/>
     <swimlane Id="b7ba02e3-7359-4d9d-ace2-68d8fb0ca485" blue="204"
-      green="255" height="298" label="Swimlane1" labelBlue="255"
+      green="255" height="299" label="Swimlane1" labelBlue="255"
       labelGreen="238" labelRed="221" name="Swimlane1" red="255"
-      uid="W14" width="717">
+      uid="W14" width="720">
       <documentation/>
     </swimlane>
   </pool>

@@ -11,6 +11,8 @@
 		</locale-config>
 	</application>
 
+	
+	
 	<managed-bean>
 		<managed-bean-name>TaskDisplayProvider</managed-bean-name>
 		<managed-bean-class>com.webmethods.caf.faces.data.task.TaskDisplayProvider</managed-bean-class>
