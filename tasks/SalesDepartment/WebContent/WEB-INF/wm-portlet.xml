@@ -64,5 +64,69 @@
 			<scope>content</scope>
 			<hidden>true</hidden>
 			<type>String</type>
+		</preference></portlet-preferences></wm-portlet>
+	<wm-portlet>
+		<portlet-name>NewApprovalTaskView</portlet-name>
+		<category>SalesDepartment</category>
+	<portlet-preferences>
+		<preference>
+			<name>taskID</name>
+			<display-name>Task ID</display-name>
+			<description></description>
+			<scope>content</scope>
+			<hidden>true</hidden>
+			<type>String</type>
+		</preference>
+		<preference>
+			<name>cancelUrl</name>
+			<display-name>Cancel URL</display-name>
+			<description></description>
+			<scope>content</scope>
+			<hidden>true</hidden>
+			<type>String</type>
+		</preference>
+		<preference>
+			<name>finishUrl</name>
+			<display-name>Finish URL</display-name>
+			<description></description>
+			<scope>content</scope>
+			<hidden>true</hidden>
+			<type>String</type>
+		</preference></portlet-preferences></wm-portlet>
+	<wm-portlet>
+		<portlet-name>NewApprovalTaskOverview</portlet-name>
+		<category>SalesDepartment</category>
+	<portlet-preferences>
+		<preference>
+			<name>taskID</name>
+			<display-name>Task ID</display-name>
+			<description></description>
+			<scope>content</scope>
+			<hidden>true</hidden>
+			<type>String</type>
+		</preference>
+		<preference>
+			<name>cancelUrl</name>
+			<display-name>Cancel URL</display-name>
+			<description></description>
+			<scope>content</scope>
+			<hidden>true</hidden>
+			<type>String</type>
+		</preference>
+		<preference>
+			<name>finishUrl</name>
+			<display-name>Finish URL</display-name>
+			<description></description>
+			<scope>content</scope>
+			<hidden>true</hidden>
+			<type>String</type>
+		</preference>
+		<preference>
+			<name>currentTab</name>
+			<display-name>Current Tab</display-name>
+			<description></description>
+			<scope>content</scope>
+			<hidden>true</hidden>
+			<type>String</type>
 		</preference></portlet-preferences></wm-portlet></wm-portlet-app>
 

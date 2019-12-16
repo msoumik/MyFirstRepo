@@ -79,6 +79,85 @@
 			</preference>
 		</portlet-preferences>
 	</portlet>
+	<portlet>
+		<portlet-name>NewApprovalTaskView</portlet-name>
+		<portlet-class>com.webmethods.caf.faces.portlet.FacesPortlet</portlet-class>
+		<init-param>
+			<name>ANNOTATED_PORTLET_ACTIONS</name>
+			<value>true</value>
+		</init-param>
+		<init-param>
+			<name>com.webmethods.caf.faces.portlet.INIT_VIEW</name>
+			<value>/NewApprovalTaskView/default.view</value>
+		</init-param>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<resource-bundle>caf.war.SalesDepartment.newapprovaltaskview.NewApprovalTaskViewResources</resource-bundle>
+		<portlet-info>
+			<title>New Approval Task View</title>
+			<short-title>NewApprovalTaskView</short-title>
+			<keywords>task,8CC7382A-469E-DE40-5AF1-4B32716C07CC,view</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>taskID</name>
+				<read-only>false</read-only>
+			</preference>
+			<preference>
+				<name>cancelUrl</name>
+				<read-only>false</read-only>
+			</preference>
+			<preference>
+				<name>finishUrl</name>
+				<read-only>false</read-only>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+	<portlet>
+		<portlet-name>NewApprovalTaskOverview</portlet-name>
+		<portlet-class>com.webmethods.caf.faces.portlet.FacesPortlet</portlet-class>
+		<init-param>
+			<name>ANNOTATED_PORTLET_ACTIONS</name>
+			<value>true</value>
+		</init-param>
+		<init-param>
+			<name>com.webmethods.caf.faces.portlet.INIT_VIEW</name>
+			<value>/NewApprovalTaskOverview/default.view</value>
+		</init-param>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<supported-locale>en</supported-locale>
+		<resource-bundle>caf.war.SalesDepartment.newapprovaltaskoverview.NewApprovalTaskOverviewResources</resource-bundle>
+		<portlet-info>
+			<title>New Approval Task Overview</title>
+			<short-title>NewApprovalTaskOverview</short-title>
+			<keywords>task,8CC7382A-469E-DE40-5AF1-4B32716C07CC,overview</keywords>
+		</portlet-info>
+		<portlet-preferences>
+			<preference>
+				<name>taskID</name>
+				<read-only>false</read-only>
+			</preference>
+			<preference>
+				<name>cancelUrl</name>
+				<read-only>false</read-only>
+			</preference>
+			<preference>
+				<name>finishUrl</name>
+				<read-only>false</read-only>
+			</preference>
+			<preference>
+				<name>currentTab</name>
+				<value>TaskData</value>
+				<read-only>false</read-only>
+			</preference>
+		</portlet-preferences>
+	</portlet>
 	<user-attribute>
 		<name>user.default.time_zone</name>
 	</user-attribute>
