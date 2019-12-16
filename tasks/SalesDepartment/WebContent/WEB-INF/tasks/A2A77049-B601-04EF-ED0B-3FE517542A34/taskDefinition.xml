@@ -1,0 +1,231 @@
+<!-- Task definition file -->
+<CONFIG xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="http://www.webmethods.com/schema/xmlImport.xsd"
+    taskId="A2A77049-B601-04EF-ED0B-3FE517542A34" 
+    displayName="NewApprovalTask" 
+    clientBeanName="NewApprovalTask2" 
+    ruleContextBeanName="NewApprovalTaskRuleContext"
+>
+    <!-- Setup rules storage -->
+    <CONTEXT alias="task.rules.storage">
+        <folder name="A2A77049-B601-04EF-ED0B-3FE517542A34 Rules" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.rules.storage">
+            <folder name="Assignment" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.routing.rules.storage"/>
+            <folder name="Filters" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.filter.rules.storage"/>
+            <folder name="Change Rules" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.change.rules.storage"/>
+            <folder name="Schedule" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.schedule.rules.storage"/>
+            <folder name="Delegation" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.delegation.rules.storage"/>
+            <folder name="Rule Editing Context Storage" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.context.storage"/>
+        </folder>
+    </CONTEXT>
+    
+    <!-- saved search storage -->
+    <CONTEXT alias="folder.search.saved">
+    	<folder name="A2A77049-B601-04EF-ED0B-3FE517542A34 Saved Searches" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.saved.search.storage">
+    		<folder name="Global Searches" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.saved.search.global.storage"/>
+    	</folder>
+    </CONTEXT>
+
+	<!-- subscription storage -->
+	<CONTEXT alias="task.subscriptions.storage">
+		<Mode type="sync">
+	        <folder name="A2A77049-B601-04EF-ED0B-3FE517542A34 Subscriptions" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.subscriptions.storage">
+			</folder>
+		</Mode>    
+    </CONTEXT>
+
+    <!-- setup test task application -->
+    <CONTEXT alias="task.definition.storage">
+        <wm_xt_task_definition
+        	name="A2A77049-B601-04EF-ED0B-3FE517542A34"
+        	description="NewApprovalTask" 
+        	isHpstraEnabled="false" 
+        	alias="A2A77049-B601-04EF-ED0B-3FE517542A34,A2A77049-B601-04EF-ED0B-3FE517542A34.definition" 
+        	audit_options="65535" 
+        	task_data_impl_class="caf.war.SalesDepartment.taskclient.NewApprovalTask2$TaskData"
+            isEnabled="true" 
+            distr_rules_folder_uri="A2A77049-B601-04EF-ED0B-3FE517542A34.routing.rules.storage" 
+            distr_filter_folder_uri="A2A77049-B601-04EF-ED0B-3FE517542A34.filter.rules.storage" 
+            trigger_rules_folder_uri="A2A77049-B601-04EF-ED0B-3FE517542A34.change.rules.storage" 
+            schedule_rules_folder_uri="A2A77049-B601-04EF-ED0B-3FE517542A34.schedule.rules.storage"
+            delegation_rules_folder_uri="A2A77049-B601-04EF-ED0B-3FE517542A34.delegation.rules.storage" 
+            task_client_name="NewApprovalTask2"
+            subscriptions_folder="A2A77049-B601-04EF-ED0B-3FE517542A34.subscriptions.storage"
+			task_app_name="salesdepartment"
+			task_description="NewApprovalTask" 
+			comment_storage_type=""
+			attach_storage_type=""
+			task_type_id="A2A77049-B601-04EF-ED0B-3FE517542A34"
+			collab_tasks="A2A77049-B601-04EF-ED0B-3FE517542A34"
+			indexTableDis=""
+			hpstraTableDis=""
+         view_task_portlet_uri="/portlet/salesdepartment___newapprovaltaskoverview1"/>
+    </CONTEXT>
+
+    <!-- Setup Rule editing contexts -->
+    <CONTEXT alias="folder.rule.contexts">
+        <wm_task_rule_editing_context 
+        	name="A2A77049-B601-04EF-ED0B-3FE517542A34 Assignment" 
+        	alias="A2A77049-B601-04EF-ED0B-3FE517542A34.distrib.rule.editing.context" 
+        	ruleType="distribution"
+            taskDefinitionURI="A2A77049-B601-04EF-ED0B-3FE517542A34.definition" 
+            rulesStorageFolder="A2A77049-B601-04EF-ED0B-3FE517542A34.routing.rules.storage"/>
+            
+        <wm_task_rule_editing_context 
+        	name="A2A77049-B601-04EF-ED0B-3FE517542A34 Filters" 
+        	alias="A2A77049-B601-04EF-ED0B-3FE517542A34.distrib.filter.rule.editing.context" 
+        	ruleType="distribution.filter"
+            taskDefinitionURI="A2A77049-B601-04EF-ED0B-3FE517542A34.definition" 
+            rulesStorageFolder="A2A77049-B601-04EF-ED0B-3FE517542A34.filter.rules.storage"/>
+
+        <wm_task_rule_editing_context 
+        	name="A2A77049-B601-04EF-ED0B-3FE517542A34 Change Rules" 
+        	alias="A2A77049-B601-04EF-ED0B-3FE517542A34.trigger.rule.editing.context" 
+        	ruleType="trigger"
+            taskDefinitionURI="A2A77049-B601-04EF-ED0B-3FE517542A34.definition" 
+            rulesStorageFolder="A2A77049-B601-04EF-ED0B-3FE517542A34.change.rules.storage"/>
+        
+        <wm_task_rule_editing_context 
+        	name="A2A77049-B601-04EF-ED0B-3FE517542A34 Schedule" 
+        	alias="A2A77049-B601-04EF-ED0B-3FE517542A34.schedule.rule.editing.context" 
+        	ruleType="schedule"
+            taskDefinitionURI="A2A77049-B601-04EF-ED0B-3FE517542A34.definition" 
+            rulesStorageFolder="A2A77049-B601-04EF-ED0B-3FE517542A34.schedule.rules.storage"/>
+
+        <wm_task_rule_editing_context 
+        	name="A2A77049-B601-04EF-ED0B-3FE517542A34 Delegation" 
+        	alias="A2A77049-B601-04EF-ED0B-3FE517542A34.delegation.rule.editing.context" 
+        	ruleType="delegation"
+            taskDefinitionURI="A2A77049-B601-04EF-ED0B-3FE517542A34.definition" 
+            rulesStorageFolder="A2A77049-B601-04EF-ED0B-3FE517542A34.delegation.rules.storage"/>
+
+    </CONTEXT>
+
+    <!-- include task rules file -->
+	<include include="/WEB-INF/tasks/A2A77049-B601-04EF-ED0B-3FE517542A34/taskRules.xml"/>
+
+	<!-- Publish Task pages -->
+	<CONTEXT alias="webm.apps.workflow">
+		<folder name="NewApprovalTask" description="" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.task.app" isTaskFolder="true"/>
+    </CONTEXT>
+
+	<CONTEXT alias="A2A77049-B601-04EF-ED0B-3FE517542A34.task.app">
+	    <!-- Setup Rule Admins -->
+        <folder name="Manage Assignments" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.distribution.rules.admin.page">
+          <page>
+            <row>
+              <column>
+          	    <wm_ruleadmin name="Manage Assignments"
+	  		  	    alias="A2A77049-B601-04EF-ED0B-3FE517542A34.distribution.rules.admin"
+              		ruleFolderURI="A2A77049-B601-04EF-ED0B-3FE517542A34.routing.rules.storage"
+                    ruleTextResourceBundle="com.webmethods.portal.portlet.wm_ruleadmin.resources.RuleadminResources"
+                    viewRulesTextKey="text.taskrule.viewrules"
+                    evalOrderTextKey="text.taskrule.evalorder"
+                    addRuleTextKey="text.taskrule.addrule"
+                    modifyRuleTextKey="text.taskrule.modifyrule"
+                    cloneRuleTextKey="text.taskrule.clonerule"
+                    ruleEditingContextURI="A2A77049-B601-04EF-ED0B-3FE517542A34.distrib.rule.editing.context">
+                </wm_ruleadmin>
+            	<wm_task_search___returnurlbutton name="Return" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.distribution.rules.return">
+                  <layout name="titlebar" value="false"/> 
+                  <layout name="border" value="false"/>            			
+            	</wm_task_search___returnurlbutton>
+              </column>
+            </row>
+            <hobos/>
+          </page>
+        </folder>
+        <folder name="Manage Filters" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.distribution.filter.rules.admin.page">
+          <page>
+            <row>
+              <column>
+          		<wm_ruleadmin name="Manage Filters"
+					alias="A2A77049-B601-04EF-ED0B-3FE517542A34.distribution.filter.rules.admin"
+		            ruleFolderURI="A2A77049-B601-04EF-ED0B-3FE517542A34.filter.rules.storage"
+        		    ruleTextResourceBundle="com.webmethods.portal.portlet.wm_ruleadmin.resources.RuleadminResources"
+		            viewRulesTextKey="text.taskrule.viewrules"
+		            evalOrderTextKey="text.taskrule.evalorder"
+		            addRuleTextKey="text.taskrule.addrule"
+		            modifyRuleTextKey="text.taskrule.modifyrule"
+		            cloneRuleTextKey="text.taskrule.clonerule"
+		            ruleEditingContextURI="A2A77049-B601-04EF-ED0B-3FE517542A34.distrib.filter.rule.editing.context">
+        		</wm_ruleadmin>        
+            	<wm_task_search___returnurlbutton name="Return" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.distribution.filter.rules.return">
+                  <layout name="titlebar" value="false"/> 
+                  <layout name="border" value="false"/>            			
+            	</wm_task_search___returnurlbutton>
+              </column>
+            </row>
+            <hobos/>
+          </page>
+        </folder>
+        <folder name="Manage Change Rules" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.trigger.rules.admin.page">
+          <page>
+            <row>
+              <column>
+		        <wm_ruleadmin name="Manage Change Rules"
+					alias="A2A77049-B601-04EF-ED0B-3FE517542A34.trigger.rules.admin"
+		            ruleFolderURI="A2A77049-B601-04EF-ED0B-3FE517542A34.change.rules.storage"
+		            ruleTextResourceBundle="com.webmethods.portal.portlet.wm_ruleadmin.resources.RuleadminResources"
+		            viewRulesTextKey="text.taskrule.viewrules"
+		            evalOrderTextKey="text.taskrule.evalorder"
+		            addRuleTextKey="text.taskrule.addrule"
+		            modifyRuleTextKey="text.taskrule.modifyrule"
+		            cloneRuleTextKey="text.taskrule.clonerule"
+		            ruleEditingContextURI="A2A77049-B601-04EF-ED0B-3FE517542A34.trigger.rule.editing.context">
+		        </wm_ruleadmin>
+            	<wm_task_search___returnurlbutton name="Return" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.trigger.rules.return">
+                  <layout name="titlebar" value="false"/> 
+                  <layout name="border" value="false"/>            			
+            	</wm_task_search___returnurlbutton>
+              </column>
+            </row>
+            <hobos/>
+          </page>
+        </folder>
+        <folder name="Manage Schedules" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.schedule.rules.admin.page">
+          <page>
+            <row>
+              <column>
+		        <wm_ruleadmin name="Manage Schedules"
+					alias="A2A77049-B601-04EF-ED0B-3FE517542A34.schedule.rules.admin"
+		            ruleFolderURI="A2A77049-B601-04EF-ED0B-3FE517542A34.schedule.rules.storage"
+		            ruleTextResourceBundle="com.webmethods.portal.portlet.wm_ruleadmin.resources.RuleadminResources"
+		            viewRulesTextKey="text.taskrule.viewrules"
+		            evalOrderTextKey="text.taskrule.evalorder"
+		            addRuleTextKey="text.taskrule.addrule"
+		            modifyRuleTextKey="text.taskrule.modifyrule"
+		            cloneRuleTextKey="text.taskrule.clonerule"
+		            ruleEditingContextURI="A2A77049-B601-04EF-ED0B-3FE517542A34.schedule.rule.editing.context">
+		        </wm_ruleadmin>
+            	<wm_task_search___returnurlbutton name="Return" alias="A2A77049-B601-04EF-ED0B-3FE517542A34.schedule.rules.return">
+                  <layout name="titlebar" value="false"/> 
+                  <layout name="border" value="false"/>            			
+            	</wm_task_search___returnurlbutton>
+              </column>
+            </row>
+            <hobos/>
+          </page>
+        </folder>
+        <wm_ruleadmin name="Manage Delegations" 
+			alias="A2A77049-B601-04EF-ED0B-3FE517542A34.delegation.rules.admin"
+            ruleFolderURI="A2A77049-B601-04EF-ED0B-3FE517542A34.delegation.rules.storage"
+            ruleTextResourceBundle="com.webmethods.portal.portlet.wm_ruleadmin.resources.RuleadminResources"
+            viewRulesTextKey="text.taskrule.viewrules"
+            evalOrderTextKey="text.taskrule.evalorder"
+            addRuleTextKey="text.taskrule.addrule"
+            modifyRuleTextKey="text.taskrule.modifyrule"
+            cloneRuleTextKey="text.taskrule.clonerule"
+            ruleEditingContextURI="A2A77049-B601-04EF-ED0B-3FE517542A34.delegation.rule.editing.context">
+        </wm_ruleadmin>
+    </CONTEXT>
+
+	<!-- Start Task -->
+	<include include="/WEB-INF/tasks/A2A77049-B601-04EF-ED0B-3FE517542A34/taskStart.xml"/>
+	
+	<!-- Custom Task Details -->
+	<include include="/WEB-INF/tasks/A2A77049-B601-04EF-ED0B-3FE517542A34/taskDetails.xml"/>
+	
+	<!-- Custom Inbox Page -->
+	<include include="/WEB-INF/tasks/A2A77049-B601-04EF-ED0B-3FE517542A34/taskInbox.xml"/>
+	
+</CONFIG>

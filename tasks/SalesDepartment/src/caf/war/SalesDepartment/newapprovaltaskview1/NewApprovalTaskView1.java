@@ -1,7 +1,7 @@
 /**
  * 
  */
-package caf.war.SalesDepartment.newapprovaltaskoverview;
+package caf.war.SalesDepartment.newapprovaltaskview1;
 
 /**
  * @author SOMU
@@ -15,23 +15,23 @@ import com.webmethods.caf.faces.annotations.ExpireWithPageFlow;
 import com.webmethods.caf.faces.annotations.DTManagedBean;
 import com.webmethods.caf.faces.annotations.BeanType;
 
-@ManagedBean(name = "NewApprovalTaskOverview")
+@ManagedBean(name = "NewApprovalTaskView1")
 @SessionScoped
 @ExpireWithPageFlow
-@DTManagedBean(displayName = "NewApprovalTaskOverview", beanType = BeanType.PORTLET)
-public class NewApprovalTaskOverview  extends   com.webmethods.caf.faces.bean.BaseFacesPreferencesBean {
+@DTManagedBean(displayName = "NewApprovalTaskView1", beanType = BeanType.PORTLET)
+public class NewApprovalTaskView1  extends   com.webmethods.caf.faces.bean.BaseFacesPreferencesBean {
 
 	private transient caf.war.SalesDepartment.SalesDepartment salesDepartment = null;
 	/**
 	 * List of portlet preference names
 	 */
 	public static final String[] PREFERENCES_NAMES = new String[] {
-		"taskID", "cancelUrl", "finishUrl", "currentTab"
+		"taskID", "cancelUrl", "finishUrl"
 	};
 	/**
 	 * Create new preferences bean with list of preference names
 	 */
-	public NewApprovalTaskOverview() {
+	public NewApprovalTaskView1() {
 		super(PREFERENCES_NAMES);
 	}
 	
@@ -101,22 +101,5 @@ public class NewApprovalTaskOverview  extends   com.webmethods.caf.faces.bean.Ba
 	 */
 	public void setFinishUrl(String finishUrl) throws Exception {
 		setPreferenceValue("finishUrl", finishUrl);
-	}
-
-	/**
-	 * The algorithm for this 'smart' preference getter is:
-	 * 1) Check the Request Map (skip this step if it isn't a 'smart' preference)
-	 * 2) Check the Member variable
-	 * 3) Fall back to the PortletPreferences
-	 */
-	public String getCurrentTab() throws Exception {
-		return (String) getPreferenceValue("currentTab", String.class);
-	}
-
-	/**
-	 * Invoke {@link #storePreferences} to persist these changes
-	 */
-	public void setCurrentTab(String currentTab) throws Exception {
-		setPreferenceValue("currentTab", currentTab);
 	}
 }
