@@ -27,10 +27,10 @@ pipeline {
                 bat "${env.SAG_HOME}/common/AssetBuildEnvironment/bin/build.bat"
             }
         }
-/*        stage('CreateProject'){
+        stage('CreateProject'){
             steps {
                 bat "${env.SAG_HOME}/IntegrationServer/instances/default/packages/WmDeployer/bin/projectautomator.bat ${env.SAG_HOME}/IntegrationServer/instances/default/packages/WmDeployer/config/ProjectAutomator_${PRODUCT_TYPE}.xml"
             }
-        } */
+        } 
     }
 }
