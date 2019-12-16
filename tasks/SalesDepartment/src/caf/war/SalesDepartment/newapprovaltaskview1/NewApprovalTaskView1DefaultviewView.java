@@ -1,7 +1,7 @@
 /**
  * 
  */
-package caf.war.SalesDepartment.newapprovaltaskview;
+package caf.war.SalesDepartment.newapprovaltaskview1;
 
 /**
  * @author SOMU
@@ -21,11 +21,11 @@ import com.webmethods.caf.faces.annotations.ExpireWithPageFlow;
 import com.webmethods.caf.faces.annotations.DTManagedBean;
 import com.webmethods.caf.faces.annotations.BeanType;
 
-@ManagedBean(name = "NewApprovalTaskViewDefaultviewView")
+@ManagedBean(name = "NewApprovalTaskView1DefaultviewView")
 @SessionScoped
 @ExpireWithPageFlow
-@DTManagedBean(displayName = "NewApprovalTaskView/default", beanType = BeanType.PAGE)
-public class NewApprovalTaskViewDefaultviewView extends com.webmethods.caf.faces.bean.task.BaseTaskDetailsPageBean {
+@DTManagedBean(displayName = "NewApprovalTaskView1/default", beanType = BeanType.PAGE)
+public class NewApprovalTaskView1DefaultviewView extends com.webmethods.caf.faces.bean.task.BaseTaskDetailsPageBean {
 
  
 	/**
@@ -39,7 +39,7 @@ public class NewApprovalTaskViewDefaultviewView extends com.webmethods.caf.faces
 	private static final long serialVersionUID = 1L;
 	private com.webmethods.caf.faces.data.task.TaskDisplayProvider taskDisplayProvider = null;
 	private static final String[][] TASKDISPLAYPROVIDER_PROPERTY_BINDINGS = new String[][] {
-		{"#{TaskDisplayProvider.taskID}", "#{NewApprovalTaskView.taskID}"},
+		{"#{TaskDisplayProvider.taskID}", "#{NewApprovalTaskView1.taskID}"},
 	};
 	
 	
@@ -59,7 +59,7 @@ public class NewApprovalTaskViewDefaultviewView extends com.webmethods.caf.faces
 	public String cancelView() {
 		try {
 			// just redirect to return (finish) url
-			String url = getNewApprovalTaskView().getFinishUrl();
+			String url = getNewApprovalTaskView1().getFinishUrl();
 			if (url != null && url.length() > 0) {
 				getFacesContext().getExternalContext().redirect(url);
 			}
@@ -75,17 +75,17 @@ public class NewApprovalTaskViewDefaultviewView extends com.webmethods.caf.faces
 	 */
 	public String completeTask() {
 		try {
-			if( !getNewApprovalTask().isUpdateable() ){
+			if( !getNewApprovalTask2().isUpdateable() ){
 				String errMsg = "You must accept a task before updating it";	//view.task.pagebean.task.accept.msg
 				error(errMsg);
 				return null; 
 			}
 
 			// do the work
-			getNewApprovalTask().completeTask(); 
+			getNewApprovalTask2().completeTask(); 
 		
 			// then redirect to finish url
-			String url = getNewApprovalTaskView().getFinishUrl(); 
+			String url = getNewApprovalTaskView1().getFinishUrl(); 
 			if (url != null && url.length() > 0) {
 				getFacesContext().getExternalContext().redirect(url);
 			}
@@ -101,7 +101,7 @@ public class NewApprovalTaskViewDefaultviewView extends com.webmethods.caf.faces
 	 */
 	public String submitTask() {
 		try {
-			if( !getNewApprovalTask().isUpdateable() ){
+			if( !getNewApprovalTask2().isUpdateable() ){
 				String errMsg = "You must accept a task before updating it";	//view.task.pagebean.task.accept.msg
 				error(errMsg);
 				return null; 
@@ -109,7 +109,7 @@ public class NewApprovalTaskViewDefaultviewView extends com.webmethods.caf.faces
 
 
 			// do the work
-			getNewApprovalTask().applyChanges();
+			getNewApprovalTask2().applyChanges();
 		} catch (Exception e) {
 			error(e);
 			log(e);
@@ -134,7 +134,7 @@ public class NewApprovalTaskViewDefaultviewView extends com.webmethods.caf.faces
 		try {
 
 			// get the current assigned principals for this task
-			TaskContentProvider tp = getNewApprovalTask();
+			TaskContentProvider tp = getNewApprovalTask2();
 
 			List<String> currentPrincipalList = new ArrayList<String>();
 			String[] currentPrincipalIDs = tp.getTaskInfo().getAssignedToList();
@@ -174,14 +174,14 @@ public class NewApprovalTaskViewDefaultviewView extends com.webmethods.caf.faces
 	}
 	
 	private static final String[][] INITIALIZE_PROPERTY_BINDINGS = new String[][] {
-		{"#{NewApprovalTask.reset}", null}
+		{"#{NewApprovalTask2.reset}", null}
 	};
-	private transient caf.war.SalesDepartment.newapprovaltaskview.NewApprovalTaskView newApprovalTaskView = null;
-	private caf.war.SalesDepartment.taskclient.NewApprovalTask newApprovalTask = null;
-	private static final String[][] NEWAPPROVALTASK_PROPERTY_BINDINGS = new String[][] {
-		{"#{NewApprovalTask.taskID}", "#{NewApprovalTaskView.taskID}"},
-		{"#{NewApprovalTask.autoAccept}", "false"},
-		{"#{NewApprovalTask.adhocRouting}", "false"},
+	private transient caf.war.SalesDepartment.newapprovaltaskview1.NewApprovalTaskView1 newApprovalTaskView1 = null;
+	private caf.war.SalesDepartment.taskclient.NewApprovalTask2 newApprovalTask2 = null;
+	private static final String[][] NEWAPPROVALTASK2_PROPERTY_BINDINGS = new String[][] {
+		{"#{NewApprovalTask2.taskID}", "#{NewApprovalTaskView1.taskID}"},
+		{"#{NewApprovalTask2.autoAccept}", "false"},
+		{"#{NewApprovalTask2.adhocRouting}", "false"},
 	};
 
 	/**
@@ -201,7 +201,7 @@ public class NewApprovalTaskViewDefaultviewView extends com.webmethods.caf.faces
 	protected void beforeRenderResponse() {
 		super.beforeRenderResponse();
 		try {
-			getNewApprovalTask().refresh();
+			getNewApprovalTask2().refresh();
 		} catch( Exception ex ) {
 			error(ex);
 			log(ex);
@@ -210,20 +210,20 @@ public class NewApprovalTaskViewDefaultviewView extends com.webmethods.caf.faces
 	}
 
 
-	public caf.war.SalesDepartment.newapprovaltaskview.NewApprovalTaskView getNewApprovalTaskView()  {
-		if (newApprovalTaskView == null) {
-		    newApprovalTaskView = (caf.war.SalesDepartment.newapprovaltaskview.NewApprovalTaskView)resolveExpression("#{NewApprovalTaskView}");
+	public caf.war.SalesDepartment.newapprovaltaskview1.NewApprovalTaskView1 getNewApprovalTaskView1()  {
+		if (newApprovalTaskView1 == null) {
+		    newApprovalTaskView1 = (caf.war.SalesDepartment.newapprovaltaskview1.NewApprovalTaskView1)resolveExpression("#{NewApprovalTaskView1}");
 		}
-		return newApprovalTaskView;
+		return newApprovalTaskView1;
 	}
 
 
-	public caf.war.SalesDepartment.taskclient.NewApprovalTask getNewApprovalTask()  {
-		if (newApprovalTask == null) {
-		    newApprovalTask = (caf.war.SalesDepartment.taskclient.NewApprovalTask)resolveExpression("#{NewApprovalTask}");
+	public caf.war.SalesDepartment.taskclient.NewApprovalTask2 getNewApprovalTask2()  {
+		if (newApprovalTask2 == null) {
+		    newApprovalTask2 = (caf.war.SalesDepartment.taskclient.NewApprovalTask2)resolveExpression("#{NewApprovalTask2}");
 		}
 	
-	    resolveDataBinding(NEWAPPROVALTASK_PROPERTY_BINDINGS, newApprovalTask, "newApprovalTask", false, false);
-		return newApprovalTask;
+	    resolveDataBinding(NEWAPPROVALTASK2_PROPERTY_BINDINGS, newApprovalTask2, "newApprovalTask2", false, false);
+		return newApprovalTask2;
 	}
 }

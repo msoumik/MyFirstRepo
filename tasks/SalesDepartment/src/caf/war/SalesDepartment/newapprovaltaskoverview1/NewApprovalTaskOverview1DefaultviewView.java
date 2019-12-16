@@ -1,7 +1,7 @@
 /**
  * 
  */
-package caf.war.SalesDepartment.newapprovaltaskoverview;
+package caf.war.SalesDepartment.newapprovaltaskoverview1;
 
 /**
  * @author SOMU
@@ -15,11 +15,11 @@ import com.webmethods.caf.faces.annotations.ExpireWithPageFlow;
 import com.webmethods.caf.faces.annotations.DTManagedBean;
 import com.webmethods.caf.faces.annotations.BeanType;
 
-@ManagedBean(name = "NewApprovalTaskOverviewDefaultviewView")
+@ManagedBean(name = "NewApprovalTaskOverview1DefaultviewView")
 @SessionScoped
 @ExpireWithPageFlow
-@DTManagedBean(displayName = "NewApprovalTaskOverview/default", beanType = BeanType.PAGE)
-public class NewApprovalTaskOverviewDefaultviewView extends com.webmethods.caf.faces.bean.BasePageBean {
+@DTManagedBean(displayName = "NewApprovalTaskOverview1/default", beanType = BeanType.PAGE)
+public class NewApprovalTaskOverview1DefaultviewView extends com.webmethods.caf.faces.bean.BasePageBean {
 
 
 	private static final long serialVersionUID = 1L;
@@ -30,11 +30,11 @@ public class NewApprovalTaskOverviewDefaultviewView extends com.webmethods.caf.f
 	// binding the Task Display Provider to the current taskID (passed to the Portlet Bean via the URL)
 	private TaskDisplayProvider taskDisplayProvider = null;
 	private static final String[][] TASKDISPLAYPROVIDER_PROPERTY_BINDINGS = new String[][] { {
-			"#{TaskDisplayProvider.taskID}", "#{NewApprovalTaskOverview.taskID}" }, };
-	private transient caf.war.SalesDepartment.newapprovaltaskoverview.NewApprovalTaskOverview newApprovalTaskOverview = null;
-	private caf.war.SalesDepartment.taskclient.NewApprovalTask newApprovalTask = null;
-	private static final String[][] NEWAPPROVALTASK_PROPERTY_BINDINGS = new String[][] {
-		{"#{NewApprovalTask.taskID}", "#{NewApprovalTaskOverview.taskID}"},
+			"#{TaskDisplayProvider.taskID}", "#{NewApprovalTaskOverview1.taskID}" }, };
+	private transient caf.war.SalesDepartment.newapprovaltaskoverview1.NewApprovalTaskOverview1 newApprovalTaskOverview1 = null;
+	private caf.war.SalesDepartment.taskclient.NewApprovalTask2 newApprovalTask2 = null;
+	private static final String[][] NEWAPPROVALTASK2_PROPERTY_BINDINGS = new String[][] {
+		{"#{NewApprovalTask2.taskID}", "#{NewApprovalTaskOverview1.taskID}"},
 	};
 
 	/**
@@ -62,20 +62,20 @@ public class NewApprovalTaskOverviewDefaultviewView extends com.webmethods.caf.f
 		return taskDisplayProvider;
 	}
 
-	public caf.war.SalesDepartment.newapprovaltaskoverview.NewApprovalTaskOverview getNewApprovalTaskOverview()  {
-		if (newApprovalTaskOverview == null) {
-		    newApprovalTaskOverview = (caf.war.SalesDepartment.newapprovaltaskoverview.NewApprovalTaskOverview)resolveExpression("#{NewApprovalTaskOverview}");
+	public caf.war.SalesDepartment.newapprovaltaskoverview1.NewApprovalTaskOverview1 getNewApprovalTaskOverview1()  {
+		if (newApprovalTaskOverview1 == null) {
+		    newApprovalTaskOverview1 = (caf.war.SalesDepartment.newapprovaltaskoverview1.NewApprovalTaskOverview1)resolveExpression("#{NewApprovalTaskOverview1}");
 		}
-		return newApprovalTaskOverview;
+		return newApprovalTaskOverview1;
 	}
 
-	public caf.war.SalesDepartment.taskclient.NewApprovalTask getNewApprovalTask()  {
-		if (newApprovalTask == null) {
-		    newApprovalTask = (caf.war.SalesDepartment.taskclient.NewApprovalTask)resolveExpression("#{NewApprovalTask}");
+	public caf.war.SalesDepartment.taskclient.NewApprovalTask2 getNewApprovalTask2()  {
+		if (newApprovalTask2 == null) {
+		    newApprovalTask2 = (caf.war.SalesDepartment.taskclient.NewApprovalTask2)resolveExpression("#{NewApprovalTask2}");
 		}
 	
-	    resolveDataBinding(NEWAPPROVALTASK_PROPERTY_BINDINGS, newApprovalTask, "newApprovalTask", false, false);
-		return newApprovalTask;
+	    resolveDataBinding(NEWAPPROVALTASK2_PROPERTY_BINDINGS, newApprovalTask2, "newApprovalTask2", false, false);
+		return newApprovalTask2;
 	}
 
 }

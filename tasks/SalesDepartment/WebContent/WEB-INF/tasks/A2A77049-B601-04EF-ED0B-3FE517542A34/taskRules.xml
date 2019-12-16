@@ -4,22 +4,22 @@
 >
 	<Mode type="sync">
 	    <!-- Setup distribution rules -->
-	    <CONTEXT alias="8CC7382A-469E-DE40-5AF1-4B32716C07CC.routing.rules.storage">
+	    <CONTEXT alias="A2A77049-B601-04EF-ED0B-3FE517542A34.routing.rules.storage">
 	    
 	    </CONTEXT>
 	
 	    <!-- Setup distribution filters -->
-	    <CONTEXT alias="8CC7382A-469E-DE40-5AF1-4B32716C07CC.filter.rules.storage">
+	    <CONTEXT alias="A2A77049-B601-04EF-ED0B-3FE517542A34.filter.rules.storage">
 	    
 	    </CONTEXT>
 	
 	    <!-- Setup trigger rules -->
-	    <CONTEXT alias="8CC7382A-469E-DE40-5AF1-4B32716C07CC.change.rules.storage">
+	    <CONTEXT alias="A2A77049-B601-04EF-ED0B-3FE517542A34.change.rules.storage">
 	    
 	    </CONTEXT>
 	
 	    <!-- Setup schedule rules -->
-	    <CONTEXT alias="8CC7382A-469E-DE40-5AF1-4B32716C07CC.schedule.rules.storage">
+	    <CONTEXT alias="A2A77049-B601-04EF-ED0B-3FE517542A34.schedule.rules.storage">
 	    
 	    </CONTEXT>
 	</Mode>

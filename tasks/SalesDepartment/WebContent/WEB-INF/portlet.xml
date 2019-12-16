@@ -79,8 +79,10 @@
 			</preference>
 		</portlet-preferences>
 	</portlet>
+
+
 	<portlet>
-		<portlet-name>NewApprovalTaskView</portlet-name>
+		<portlet-name>NewApprovalTaskView1</portlet-name>
 		<portlet-class>com.webmethods.caf.faces.portlet.FacesPortlet</portlet-class>
 		<init-param>
 			<name>ANNOTATED_PORTLET_ACTIONS</name>
@@ -88,18 +90,18 @@
 		</init-param>
 		<init-param>
 			<name>com.webmethods.caf.faces.portlet.INIT_VIEW</name>
-			<value>/NewApprovalTaskView/default.view</value>
+			<value>/NewApprovalTaskView1/default.view</value>
 		</init-param>
 		<supports>
 			<mime-type>text/html</mime-type>
 			<portlet-mode>view</portlet-mode>
 		</supports>
 		<supported-locale>en</supported-locale>
-		<resource-bundle>caf.war.SalesDepartment.newapprovaltaskview.NewApprovalTaskViewResources</resource-bundle>
+		<resource-bundle>caf.war.SalesDepartment.newapprovaltaskview1.NewApprovalTaskView1Resources</resource-bundle>
 		<portlet-info>
-			<title>New Approval Task View</title>
-			<short-title>NewApprovalTaskView</short-title>
-			<keywords>task,8CC7382A-469E-DE40-5AF1-4B32716C07CC,view</keywords>
+			<title>NewApprovalTask View</title>
+			<short-title>NewApprovalTaskView1</short-title>
+			<keywords>task,A2A77049-B601-04EF-ED0B-3FE517542A34,view</keywords>
 		</portlet-info>
 		<portlet-preferences>
 			<preference>
@@ -117,7 +119,7 @@
 		</portlet-preferences>
 	</portlet>
 	<portlet>
-		<portlet-name>NewApprovalTaskOverview</portlet-name>
+		<portlet-name>NewApprovalTaskOverview1</portlet-name>
 		<portlet-class>com.webmethods.caf.faces.portlet.FacesPortlet</portlet-class>
 		<init-param>
 			<name>ANNOTATED_PORTLET_ACTIONS</name>
@@ -125,18 +127,18 @@
 		</init-param>
 		<init-param>
 			<name>com.webmethods.caf.faces.portlet.INIT_VIEW</name>
-			<value>/NewApprovalTaskOverview/default.view</value>
+			<value>/NewApprovalTaskOverview1/default.view</value>
 		</init-param>
 		<supports>
 			<mime-type>text/html</mime-type>
 			<portlet-mode>view</portlet-mode>
 		</supports>
 		<supported-locale>en</supported-locale>
-		<resource-bundle>caf.war.SalesDepartment.newapprovaltaskoverview.NewApprovalTaskOverviewResources</resource-bundle>
+		<resource-bundle>caf.war.SalesDepartment.newapprovaltaskoverview1.NewApprovalTaskOverview1Resources</resource-bundle>
 		<portlet-info>
-			<title>New Approval Task Overview</title>
-			<short-title>NewApprovalTaskOverview</short-title>
-			<keywords>task,8CC7382A-469E-DE40-5AF1-4B32716C07CC,overview</keywords>
+			<title>NewApprovalTask Overview</title>
+			<short-title>NewApprovalTaskOverview1</short-title>
+			<keywords>task,A2A77049-B601-04EF-ED0B-3FE517542A34,overview</keywords>
 		</portlet-info>
 		<portlet-preferences>
 			<preference>
