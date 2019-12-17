@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webMethodsTestSuite description="" name="BPMSuppport_TestSuite">
+    <webMethodsTestCase description="Positive test case" name="BPMSupport_TestCase1_Positive">
+        <service folder="bpmSupport.service" name="calculateTotalOrderValue">
+            <input>
+                <file filename="resources\test\data\PositiveTestCase_Input.xml"/>
+            </input>
+            <expected>
+                <file filename="resources\test\data\PositiveTestCase_Output.xml"/>
+            </expected>
+        </service>
+    </webMethodsTestCase>
+</webMethodsTestSuite>
