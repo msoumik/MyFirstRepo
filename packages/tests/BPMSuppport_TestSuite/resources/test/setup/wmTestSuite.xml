@@ -10,4 +10,24 @@
             </expected>
         </service>
     </webMethodsTestCase>
+    <webMethodsTestCase name="BPMSupport_TestCase2_Negative">
+        <service folder="bpmSupport.service" name="calculateTotalOrderValue">
+            <input>
+                <file filename="resources\test\data\BPMSupport_TestCase2_Input.xml"/>
+            </input>
+            <expected>
+                <file filename="resources\test\data\BPMSupport_TestCase2_Output.xml"/>
+            </expected>
+        </service>
+    </webMethodsTestCase>
+    <webMethodsTestCase name="calculateOrder_testcase1_Positive">
+        <service folder="bpmSupport.service" name="calculateTotalOrderValue">
+            <input>
+                <file filename="resources\test\data\calculateOrder_TestCase1__Positive_Input.xml"/>
+            </input>
+            <expected>
+                <file filename="resources\test\data\calculateOrder_TestCase1__Positive_Output.xml"/>
+            </expected>
+        </service>
+    </webMethodsTestCase>
 </webMethodsTestSuite>
