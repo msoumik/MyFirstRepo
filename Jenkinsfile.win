@@ -36,7 +36,7 @@ pipeline {
             steps {
                 bat "${env.SAG_HOME}/IntegrationServer/instances/default/packages/WmDeployer/bin/Deployer.bat --deploy -dc myDeployment -project ${PROJECT_NAME} -host ${DEPLOYER_HOST} -port ${DEPLOYER_PORT} -user ${DEPLOYER_USERNAME} -pwd ${DEPLOYER_PASSWORD}"
             }
-        }
+        } 
         
     }
 }
