@@ -32,11 +32,11 @@ pipeline {
                 bat "${env.SAG_HOME}/IntegrationServer/instances/default/packages/WmDeployer/bin/projectautomator.bat ${env.SAG_HOME}/IntegrationServer/instances/default/packages/WmDeployer/config/ProjectAutomator_${PRODUCT_TYPE}.xml"
             }
         }
-        stage('Deploy'){
+    /*    stage('Deploy'){
             steps {
                 bat "${env.SAG_HOME}/IntegrationServer/instances/default/packages/WmDeployer/bin/Deployer.bat --deploy -dc myDeployment -project ${PROJECT_NAME} -host ${DEPLOYER_HOST} -port ${DEPLOYER_PORT} -user ${DEPLOYER_USERNAME} -pwd ${DEPLOYER_PASSWORD}"
             }
-        }
-        
+        } 
+        */
     }
 }
